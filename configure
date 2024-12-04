@@ -610,10 +610,10 @@ MAKEFLAGS=
 # Identity of this package.
 PACKAGE_NAME='ippsample'
 PACKAGE_TARNAME='ippsample'
-PACKAGE_VERSION='YYYY.MM'
-PACKAGE_STRING='ippsample YYYY.MM'
-PACKAGE_BUGREPORT='https://github.com/istopwg/ippsample/issues'
-PACKAGE_URL='https://istopwg.github.io/ippsample'
+PACKAGE_VERSION='1733315918'
+PACKAGE_STRING='ippsample 1733315918'
+PACKAGE_BUGREPORT='https://github.com/mwhite42/ippsample/issues'
+PACKAGE_URL='https://view.io'
 
 enable_option_checking=no
 # Factoring default headers for most tests.

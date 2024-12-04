@@ -960,8 +960,8 @@ html_footer(server_client_t *client)	/* I - Client */
 {
   html_printf(client,
 	      "</div>\n"
-	      "<div class=\"footer\">Copyright &copy; 2014-2023 by the Printer Working Group.<br>\n"
-	      "ippserver is part of the <a href=\"https://github.com/istopwg/ippsample\" target=\"_blank\">ippsample</a> project and is provided on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. It is <em>not</em> intended for production use.</div>\n"
+	      "<div class=\"footer\">Copyright &copy; 2014-2023 by the Printer Working Group. 2024 by View Systems Inc.<br>\n"
+	      "ippserver is part of the View Systems Inc. AI Platform and is provided \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. </div>\n"
 	      "</body>\n"
 	      "</html>\n");
   httpWrite(client->http, "", 0);
@@ -1014,7 +1014,7 @@ html_header(server_client_t *client,	/* I - Client */
 	      "</style>\n"
 	      "</head>\n"
 	      "<body>\n"
-	      "<div class=\"header\"><a href=\"/\">ippserver v" IPPSAMPLE_VERSION "</a> Prototype IPP Implementation</div>\n"
+	      "<div class=\"header\"><a href=\"/\">ippserver v" IPPSAMPLE_VERSION "</a> View Systems Inc. IPP Implementation</div>\n"
 	      "<div class=\"body\">\n");
 }
 
