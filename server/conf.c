@@ -2226,7 +2226,7 @@ finalize_system(void)
     */
 
     if (!port)
-      port = 8000 + ((int)getuid() % 1000);
+      port = 8631 + ((int)getuid() % 1000); // Changed to not clash with View root port
 #endif /* _WIN32 */
 
     while (!serverCreateListeners(strcmp(ServerName, "localhost") ? NULL : "localhost", port))

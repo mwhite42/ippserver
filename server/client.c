@@ -960,7 +960,7 @@ html_footer(server_client_t *client)	/* I - Client */
 {
   html_printf(client,
 	      "</div>\n"
-	      "<div class=\"footer\">Copyright &copy; 2014-2023 by the Printer Working Group. 2024 by View Systems Inc.<br>\n"
+	      "<div class=\"footer\">Copyright &copy; 2014-2023 by the Printer Working Group and 2024 by View Systems Inc.<br>\n"
 	      "ippserver is part of the View Systems Inc. AI Platform and is provided \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. </div>\n"
 	      "</body>\n"
 	      "</html>\n");
@@ -1014,7 +1014,7 @@ html_header(server_client_t *client,	/* I - Client */
 	      "</style>\n"
 	      "</head>\n"
 	      "<body>\n"
-	      "<div class=\"header\"><a href=\"/\">ippserver v" IPPSAMPLE_VERSION "</a> View Systems Inc. IPP Implementation</div>\n"
+	      "<div class=\"header\"><a href=\"/\">ippserver v" IPPSAMPLE_VERSION "</a> View Systems Inc. IPP to AI Interface</div>\n"
 	      "<div class=\"body\">\n");
 }
 
@@ -1655,7 +1655,7 @@ show_media(server_client_t  *client,	/* I - Client connection */
 
   html_header(client, printer->name, 0);
 
-  html_printf(client, "<p class=\"buttons\"><a class=\"button\" href=\"/\">Show Printers</a> <a class=\"button\" href=\"%s\">Show Jobs</a> <a class=\"button\" href=\"%s/supplies\">Show Supplies</a></p>\n", printer->resource, printer->resource);
+//  html_printf(client, "<p class=\"buttons\"><a class=\"button\" href=\"/\">Show Printers</a> <a class=\"button\" href=\"%s\">Show Jobs</a> <a class=\"button\" href=\"%s/supplies\">Show Supplies</a></p>\n", printer->resource, printer->resource);
   html_printf(client, "<h1><img align=\"left\" src=\"%s/icon.png\" width=\"64\" height=\"64\">%s Media</h1>\n", printer->resource, printer->dns_sd_name);
 
   if ((media_col_ready = ippFindAttribute(printer->pinfo.attrs, "media-col-ready", IPP_TAG_BEGIN_COLLECTION)) == NULL)
@@ -1988,7 +1988,7 @@ show_status(server_client_t  *client,	/* I - Client connection */
     }
     else
     {
-      html_printf(client, "<p class=\"buttons\"><p class=\"buttons\"><a class=\"button\" href=\"/\">Show Printers</a> <a class=\"button\" href=\"%s/media\">Show Media</a> <a class=\"button\" href=\"%s/supplies\">Show Supplies</a>", printer->resource, printer->resource);
+//      html_printf(client, "<p class=\"buttons\"><p class=\"buttons\"><a class=\"button\" href=\"/\">Show Printers</a> <a class=\"button\" href=\"%s/media\">Show Media</a> <a class=\"button\" href=\"%s/supplies\">Show Supplies</a>", printer->resource, printer->resource);
       if (apple_client)
         html_printf(client, " <a class=\"button\" href=\"%s/apple.mobileconfig\">Use on iOS</a>", printer->resource);
       html_printf(client, "</p>\n");
@@ -2056,7 +2056,7 @@ show_status(server_client_t  *client,	/* I - Client connection */
       }
       else
       {
-        html_printf(client, "  <p class=\"buttons\"><a class=\"button\" href=\"%s\">Show Jobs</a> <a class=\"button\" href=\"%s/media\">Show Media</a> <a class=\"button\" href=\"%s/supplies\">Show Supplies</a>", printer->resource, printer->resource, printer->resource);
+//        html_printf(client, "  <p class=\"buttons\"><a class=\"button\" href=\"%s\">Show Jobs</a> <a class=\"button\" href=\"%s/media\">Show Media</a> <a class=\"button\" href=\"%s/supplies\">Show Supplies</a>", printer->resource, printer->resource, printer->resource);
 	if (apple_client)
 	  html_printf(client, " <a class=\"button\" href=\"%s/apple.mobileconfig\">Use on iOS</a>", printer->resource);
 	html_printf(client, "</p>\n");
